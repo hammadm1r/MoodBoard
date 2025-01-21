@@ -23,7 +23,7 @@ check_auth();
 
 
     
-    <p>This is the main content area. <i class="fa-solid fa-face-smile text-warning"></i></p>
+    <p>Enter your mood and let AI craft personalized quotes that resonate with your feelings. Whether you're happy, thoughtful, or seeking motivation, we've got you covered.<i class="fa-solid fa-face-smile text-warning"></i></p>
 
     <!-- Mood Input -->
     <div class="d-flex justify-content-center align-items-center my-4">
@@ -33,7 +33,7 @@ check_auth();
         <button type="button" id="submitMood" class="btn btn-primary ms-2">Submit</button>
     </div>
 </div>
-<div id="suggestions" class="row">
+<div id="suggestions" class="row h-full">
 <?php
     if (isset($suggestions) && !empty($suggestions)) {
         foreach ($suggestions as $suggestion) {
@@ -42,7 +42,9 @@ check_auth();
     }
     ?>
 </div>
-
+<div class="">
+<?php include '../includes/footer.php'; ?>
+</div>
 <script>
     const addHandler = (item, mood) => {
     console.log("Item:", item);
@@ -112,7 +114,6 @@ check_auth();
 </script>
 
 </div>
-<?php include '../includes/footer.php'; ?>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-KsvDIEfZAEHWO4C1T6mG2L9Ku46tbj/HUMe1lgmXZSmxWlaAeUpTQ8LKh6TOjFtJ" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGtoi9KpK3E5l6b13K8KVpKp1pXA38lJz9uoxRmXA8Cg0TktZn3ka7bylWr" crossorigin="anonymous"></script>

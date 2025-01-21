@@ -19,14 +19,14 @@
     <!-- Welcome Section -->
     <div class="d-flex flex-column align-items-center justify-content-center vh-100 text-center">
       <h1 class="display-4">Welcome to MoodBoard</h1>
-      <h6 class="mb-4">Unleash Your Creativity. Share Your Vision. Inspire the World.</h6>
+      <h6 class="mb-4">Feel, Express, Inspire!</h6>
       <p class="mb-5 w-75">
-        MoodBoard is your personal canvas where ideas come to life. Whether you're brainstorming, designing, or simply seeking inspiration, MoodBoard offers a platform to:
+      At Moodboard, we believe every mood deserves its moment. Whether you're looking for motivation, comfort, or a spark of creativity, our AI-powered tool generates quotes to lift your spirits or resonate with your feelings. Dive into an emotional journey and rediscover the power of words.
         <br><br>
         <ul class="list-unstyled">
-          <li>Create stunning visual boards for your projects and passions.</li>
-          <li>Collaborate with others to bring your ideas to life.</li>
-          <li>Discover and explore creative works shared by our vibrant community.</li>
+          <li>Share how you're feeling, and let AI curate a quote that matches your emotions.</li>
+          <li>An easy-to-use platform designed to let you focus on your feelings and inspiration.</li>
+          <li>Love a quote? Save it to your collection or share it with your friends.</li>
         </ul>
       </p>
       

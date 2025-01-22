@@ -1,17 +1,15 @@
 <?php
-require_once "functions.php"; // Include your database or utility functions
+require_once "functions.php";
 
 header('Content-Type: application/json');
 $data = json_decode(file_get_contents('php://input'), true);
 
-// Check if 'mood' is provided in the request
+
 if (isset($data['mood']) && !empty($data['mood'])) {
     $mood = htmlspecialchars($data['mood']);
 
-    // AI21 Labs API Key
-    $apiKey = "Sd24UTjxlnqhdxpwWevDJ2D9Lv1KuAm7";  // Replace with your actual API key
+    $apiKey = "Sd24UTjxlnqhdxpwWevDJ2D9Lv1KuAm7"; 
 
-    // Prepare the messages to send in the API request
     $messages = [
         [
             "role" => "user",
@@ -19,12 +17,11 @@ if (isset($data['mood']) && !empty($data['mood'])) {
         ]
     ];
 
-    // Define the API request payload
     $payload = [
-        "model" => "jamba-instruct",  // Ensure you're using the correct model
+        "model" => "jamba-instruct", 
         "messages" => $messages,
-        "temperature" => 0.8,  // Adjust temperature for creativity
-        "n" => 5  // Number of tokens (adjust as needed)
+        "temperature" => 0.8,  
+        "n" => 5  
     ];
 
     // Initialize cURL

@@ -83,7 +83,7 @@ check_auth();
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        suggestions.innerHTML = ''; // Clear previous suggestions
+        suggestions.innerHTML = '';
         data.Quotes.forEach(item => {
             // Create suggestion card
             const div = document.createElement('div');

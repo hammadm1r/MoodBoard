@@ -54,7 +54,6 @@ if (isset($_POST['login'])) {
 
         if (password_verify($password, $db_pass)) {
             echo "<div class='alert alert-success mt-3'>Login successful</div>";
-            echo "$userData";
             $_SESSION['username'] = $userData['username'];
             $_SESSION['userid'] = $userData['id']; ?>
             <script>

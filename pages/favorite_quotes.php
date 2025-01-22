@@ -19,14 +19,12 @@ $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
-
 <div class="container">
 <?php include '../includes/header.php'; ?>
 <div class="container mt-4">
     <div class="text-center">
         <h2>Favorite Quotes</h2>
     </div>
-
     <?php if ($result->num_rows > 0): ?>
     <div class="mt-4 row">
         <?php while ($row = $result->fetch_assoc()): ?>

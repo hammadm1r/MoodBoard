@@ -77,3 +77,29 @@ Usage
 Contributing
 
 Feel free to fork this project and submit pull requests. Please follow best practices and submit well-documented code.
+
+Sql Command 
+-> To Create 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    fathername VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE quotes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    quote TEXT NOT NULL,
+    mood VARCHAR(50) NOT NULL,
+    saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+-> To Add Any Other Feature (Customization)
+ALTER TABLE users 
+ADD COLUMN fathername VARCHAR(255) AFTER username;
+-> to Drop any Feature
+ALTER TABLE users DROP COLUMN fathername;

@@ -24,7 +24,6 @@ if (isset($data['mood']) && !empty($data['mood'])) {
         "n" => 5  
     ];
 
-    // Initialize cURL
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://api.ai21.com/studio/v1/chat/completions");  // API endpoint for chat completions
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -47,19 +46,16 @@ if (isset($data['mood']) && !empty($data['mood'])) {
 
     curl_close($ch);
 
-    // Decode the API response
-    $result = json_decode($response, true);
+    $result = json_decode($response, associative: true);
 
     // Check if the response is valid and contains expected data
     if (isset($result['choices']) && is_array($result['choices'])) {
         $quotes = [];
         foreach ($result['choices'] as $choice) {
-            // Extracting the content from the response correctly
             $quotes[] = $choice['message']['content'];
         }
         echo json_encode(["Quotes" => $quotes]);
     } else {
-        // Handle errors or unexpected response format
         echo json_encode(["Error" => "Unexpected API response format.", "Details" => $response]);
     }
 } else {
